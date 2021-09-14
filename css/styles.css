@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Serif", serif;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  background: #871302;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.header__logo {
+  height: inherit;
+  grid-column: 2/3;
+}
+.header__logo-image {
+  height: 90%;
+}
+.header__menu {
+  grid-column: 4/6;
+}
+.header__menu-buttons {
+  margin-left: 20px;
+}
+.header__menu-buttons button {
+  padding: 5px 10px;
+  background: #871302;
+  color: #fbdc87;
+  border: 2px solid #fbdc87;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.header__menu-buttons button:hover {
+  color: #871302;
+  background: #fbdc87;
+}
+.header__menu li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.header__menu a {
+  font-size: 13px;
+  color: #fbdc87;
+  position: relative;
+}
+.header__menu a::before {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fbdc87;
+  transition: width 0.3s ease;
+}
+.header__menu a:hover::before {
+  width: 100%;
+}
+
+.coverpage {
+  width: 100%;
+  height: calc(100vh - 90px);
+  position: relative;
+}
+.coverpage__image {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+.coverpage__content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.555);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.coverpage__content-title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.781);
+}
+.coverpage__content-phrase {
+  color: #fbdc87c7;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.coverpage__content-button {
+  padding: 5px 20px;
+  background: #871302;
+  color: #fbdc87;
+  border: 2px solid #fbdc87;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=styles.css.map */

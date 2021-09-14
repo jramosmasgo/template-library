@@ -1,0 +1,46 @@
+.coverpage {
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: inherit;
+        background: rgba(0, 0, 0, 0.555);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-title {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.781);
+        }
+
+        &-phrase {
+            color: #fbdc87c7;
+            width: 500px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &-button {
+            padding: 5px 20px;
+            background: $primary;
+            color: $secondary;
+            border: 2px solid $secondary;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+    }
+}
